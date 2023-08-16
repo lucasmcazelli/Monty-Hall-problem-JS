@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monty Hall Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Monty Hall Simulator</h1>
+    <p>The Monty Hall problem is a famous probability puzzle. You pick one of several doors, behind one of which is a car and behind the others are goats. After your pick, Monty, who knows what's behind each door, opens another door to reveal a goat. You then get the chance to stick with your original choice or switch to another door. The question is: Is it in your best interest to switch or not?</p>
+
+    <p>This simulation demonstrates the Monty Hall problem by running multiple rounds and updating the results in real-time. One simulation will stick with the original door choice, and the other will switch.</p>
+
+    <label for="numDoors">Number of Doors:</label>
+    <select id="numDoors">
+        <!-- Options from 3 to 9 -->
+        <option value="3">3</option>
+        <!-- ... -->
+        <option value="9">9</option>
+    </select>
+
+    <label for="simulations">Number of Simulations:</label>
+    <input type="range" id="simulations" min="100" max="1000" value="100">
+    <span id="simulationValue">100</span>
+    
+    <button onclick="runSimulations()">Run Simulations</button>
+
+
+    <h2>Results:</h2>
+    <div id="stayWin" class="bar"></div>
+    <div id="switchWin" class="bar"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
